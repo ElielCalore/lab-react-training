@@ -6,6 +6,23 @@ import { BoxColor } from './components/BoxColor';
 import { CreditCard } from './components/CreditCard';
 import { Rating } from './components/Rating';
 import { DriverCard } from './components/DriverCard';
+import { LikeButton } from './components/LikeButton';
+import { ClickablePicture } from './components/ClickablePicture';
+import { Dice } from './components/Dice';
+import { Carousel } from './components/Carousel';
+import { NumbersTable } from './components/NumbersTable';
+import { FaceBook } from './components/FaceBook';
+
+import img from './assets/images/maxence.png';
+import imgClicked from './assets/images/maxence-glasses.png';
+
+import dice0 from './assets/images/dice-empty.png';
+import dice1 from './assets/images/dice1.png';
+import dice2 from './assets/images/dice2.png';
+import dice3 from './assets/images/dice3.png';
+import dice4 from './assets/images/dice4.png';
+import dice5 from './assets/images/dice5.png';
+import dice6 from './assets/images/dice6.png';
 
 export function App() {
   return (
@@ -125,6 +142,40 @@ export function App() {
             }}
           />
         </div>
+      </div>
+      <div>
+        <LikeButton>Likes</LikeButton>
+        <LikeButton>Likes</LikeButton>
+      </div>
+      <div>
+        <ClickablePicture img={img} imgClicked={imgClicked} />
+      </div>
+      <div>
+        <Dice
+          dice0={dice0}
+          dice1={dice1}
+          dice2={dice2}
+          dice3={dice3}
+          dice4={dice4}
+          dice5={dice5}
+          dice6={dice6}
+        ></Dice>
+      </div>
+      <div>
+        <Carousel
+          images={[
+            'https://randomuser.me/api/portraits/women/1.jpg',
+            'https://randomuser.me/api/portraits/men/1.jpg',
+            'https://randomuser.me/api/portraits/women/2.jpg',
+            'https://randomuser.me/api/portraits/men/2.jpg',
+          ]}
+        />
+      </div>
+      <div>
+        <NumbersTable limit={12} />
+      </div>
+      <div>
+        <FaceBook></FaceBook>
       </div>
     </>
   );

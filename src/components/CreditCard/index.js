@@ -1,3 +1,4 @@
+import style from './style.module.css';
 export function CreditCard(props) {
   let firstFourNumbers = props.number.slice(12, 16);
   let gettingABackgound = { backgroundColor: props.bgColor };
@@ -13,7 +14,7 @@ export function CreditCard(props) {
   if (props.type === 'Visa') {
     return (
       <>
-        <div style={gettingABackgound}>
+        <div className={style.card} style={gettingABackgound}>
           <div style={gettingAColor}>
             <h2>{props.type}</h2>
             <h1>.... .... .... {firstFourNumbers}</h1>
@@ -30,7 +31,7 @@ export function CreditCard(props) {
   if (props.type === 'Master Card') {
     return (
       <>
-        <div style={gettingABackgound}>
+        <div className={style.card} style={gettingABackgound}>
           <div style={gettingAColor}>
             <h2>{props.type}</h2>
             <h1>.... .... .... {firstFourNumbers}</h1>

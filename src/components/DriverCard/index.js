@@ -1,3 +1,4 @@
+import style from './style.module.css';
 export function DriverCard(props) {
   let stars = {
     0: '☆☆☆☆☆',
@@ -14,11 +15,17 @@ export function DriverCard(props) {
   let ratingNumber = Math.round(props.rating);
   return (
     <>
-      <img src={props.img} alt="User" />
-      <h3>{props.name}</h3>
-      <div>{stars[ratingNumber]}</div>
-      <div>{destructuringModel}</div>
-      <div>{destructuringLicensePlate}</div>
+      <div className={style.driverCard}>
+        <dvi>
+          <img className={style.driverCardImage} src={props.img} alt="User" />
+        </dvi>
+        <div>
+          <h3>{props.name}</h3>
+          <div>{stars[ratingNumber]}</div>
+          <div>{destructuringModel}</div>
+          <div>{destructuringLicensePlate}</div>
+        </div>
+      </div>
     </>
   );
 }
